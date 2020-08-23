@@ -8,6 +8,7 @@ pipeline {
 
             steps {
                     sh 'mvn clean package'
+                    sh 'docker build .'
             }
         }
     }

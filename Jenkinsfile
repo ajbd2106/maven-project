@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
     tools {
         maven 'localmaven'
     }
@@ -10,7 +8,7 @@ pipeline {
 
             steps {
                     sh 'mvn clean package'
-                    sh 'docker build . -t tomcatweb:${env.BUILD_ID}'
+                    
             }
         }
     }

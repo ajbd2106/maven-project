@@ -1,7 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     tools {
         maven 'localmaven'
+    }
+    tools {
+        docker 'docker'
     }
     stages {
         stage ('Compile Stage') {

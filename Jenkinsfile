@@ -4,7 +4,7 @@ pipeline {
         maven 'localmaven'
     }
     tools {
-        docker 'docker'
+        dockerTool 'docker'
     }
     stages {
         stage ('Compile Stage') {
